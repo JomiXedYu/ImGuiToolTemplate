@@ -1,4 +1,4 @@
-# ImGuiToolTemplate
+ï»¿# ImGuiToolTemplate
  
 
 
@@ -21,7 +21,7 @@ void _UIStyleInit()
 
 void _UIUpdate()
 {
-    ImGui::Text("ÊÀ½ç£¬ÄãºÃ");
+    ImGui::Text("ä¸–ç•Œï¼Œä½ å¥½");
     if (ImGui::Button("Hello world!", {-1,0}))
     {
 
