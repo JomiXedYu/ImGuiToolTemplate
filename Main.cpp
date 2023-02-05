@@ -24,14 +24,9 @@ void SetWindowTitle(const char* title)
     SetWindowText(GetCurrentWindow(), title);
 }
 
-struct {
+static struct {
     int width, height;
 } windows_size;
-
-std::tuple<int, int> GetWindowSize()
-{
-    return { windows_size.width, windows_size.height };
-}
 
 static float GetUIScaling()
 {
