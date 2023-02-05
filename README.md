@@ -5,10 +5,10 @@
 UIUpdate.cpp
 
 ```c++
-void _UIWindowInit(char* title, int* weight, int* height)
+void _UIWindowInit(char* title, int* width, int* height)
 {
     ::strcpy_s(title, 256, __PROJECT_NAME);
-    *weight = 400;
+    *width = 400;
     *height = 600;
 }
 
