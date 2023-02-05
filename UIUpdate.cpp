@@ -5,6 +5,7 @@
 #include <CoreLib/CoreLib.h>
 #include <CoreLib.Serialization/JsonSerializer.h>
 #include <CoreLib.Serialization/DataSerializer.h>
+#include <imgui/imgui.h>
 
 using namespace std;
 using namespace jxcorlib;
