@@ -1,5 +1,6 @@
 #pragma once
 
-void UIMainWindowInit(char* title, int* width, int* height);
-void UIMainStyleInit();
-void UIMainUpdate();
+void UIMain_WindowInit(char* title, int* width, int* height);
+void UIMain_StyleInit();
+void UIMain_OnGui();
+void UIMain_Terminate();

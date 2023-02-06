@@ -50,7 +50,7 @@ int main()
 
     char title[256];
 
-    UIMainWindowInit(title, &windows_size.width, &windows_size.height);
+    UIMain_WindowInit(title, &windows_size.width, &windows_size.height);
 
     window = glfwCreateWindow(windows_size.width, windows_size.height, title, NULL, NULL);
     int max_width = GetSystemMetrics(SM_CXSCREEN);
@@ -91,7 +91,7 @@ int main()
 
     io.Fonts->Build();
 
-    UIMainStyleInit();
+    UIMain_StyleInit();
 
     ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
@@ -115,7 +115,7 @@ int main()
         {
             ImGui::SetWindowPos({ 0,0 });
             ImGui::SetWindowSize({ (float)windows_size.width, (float)windows_size.height });
-            UIMainUpdate();
+            UIMain_OnGui();
             ImGui::End();
         }
 
@@ -125,6 +125,8 @@ int main()
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+
+    UIMain_Terminate();
 
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
