@@ -7,7 +7,7 @@
 #include <imgui/imgui_impl_glfw.h>
 #include <imgui/imgui_impl_opengl3.h>
 #include <Windows.h>
-#include "UIUpdate.h"
+#include "UIMain.h"
 #include "Monaco.ttf.h"
 
 using namespace std;
@@ -50,7 +50,7 @@ int main()
 
     char title[256];
 
-    _UIWindowInit(title, &windows_size.width, &windows_size.height);
+    UIMainWindowInit(title, &windows_size.width, &windows_size.height);
 
     window = glfwCreateWindow(windows_size.width, windows_size.height, title, NULL, NULL);
     int max_width = GetSystemMetrics(SM_CXSCREEN);
@@ -91,7 +91,7 @@ int main()
 
     io.Fonts->Build();
 
-    _UIStyleInit();
+    UIMainStyleInit();
 
     ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
@@ -115,7 +115,7 @@ int main()
         {
             ImGui::SetWindowPos({ 0,0 });
             ImGui::SetWindowSize({ (float)windows_size.width, (float)windows_size.height });
-            _UIUpdate();
+            UIMainUpdate();
             ImGui::End();
         }
 
